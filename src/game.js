@@ -14,15 +14,14 @@ export function genGame(lv){
     mirror[i] = randomCake()
   }
   const game = [...mirror,...mirror];
-  for(let i =0; i<=lv; i++){
+  do{
     for(let i of p){
       let m = Math.random()>0.5 ? i: i+6;
       let n = rn(12);
       while(m===n){n=rn(12)};
       [game[m],game[n]] = [game[n],game[m]]
-
     }
-  }
+  } while(checkGame(game));
   return game
 }
 /**

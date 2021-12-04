@@ -12,6 +12,7 @@ function Cakes({children, index}) {
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging()
     }),
+    canDrag:!!children
   }),[ index,children,data,step,lv,score] )
 
   const [{ isOver }, drop] = useDrop(

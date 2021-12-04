@@ -48,7 +48,6 @@ export default function ({ children }) {
     [ _data[drag.index], _data[drop.index] ];
     
     if(checkGame(_data)){
-      console.log(lv);
       setData(genGame(lv));
       setScore(score+ step*100);
       setStep(lv);
