@@ -8,12 +8,13 @@ import { usePreview } from 'react-dnd-preview';
 
 import RectRender from "./rectRender"
 import Status from "./status";
+import Overlay from "./overlay";
 const MyPreview = () => {
   const {display, itemType, item, style} = usePreview();
   if (!display) {
     return null;
   }
-  return <div style={style}>{item.type}</div>;
+  return <div style={style} className="cakes rounded bg-red-100 bg-opacity-50">{item.type}</div>;
 };
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         { isMobile && <MyPreview />}
         <RectRender></RectRender>
         <Status/>
+        <Overlay />
       </DndProvider>
     </Provider>
   )

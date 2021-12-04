@@ -29,7 +29,9 @@ function Cakes({children, index}) {
 
   return (
     <>
-      <div ref={(node) => drag(drop(node))} className={`cakes border-2 ${isOver&&'border-red-500'} `}>
+      <div ref={(node) => drag(drop(node))} className={`cakes
+        ${isDragging?'grabbing bg-gray-100 opacity-25 shadow-inner':'bg-pink-100'}
+        ${isOver?'border-red-500 border-2':''} `}>
         {children}
       </div>
     </>

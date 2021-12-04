@@ -11,14 +11,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root{
+  @apply w-full flex flex-col justify-center items-center;
+  height: 100vh;
 }
 .cakes{
-  height: 50px;
-  width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @apply flex items-center justify-center text-2xl m-1 rounded-xl 
+  hover:shadow hover:bg-opacity-70 transition-colors;
+  cursor:grab;
+  height: 75px;
+  width: 75px;
+}
+
+.overlay{
+  @apply w-full h-full bg-white bg-opacity-80 flex flex-col items-center justify-center fixed top-0 left-0;
+}
+
+.button{
+  @apply rounded text-white py-2 px-4 hover:bg-opacity-90 hover:shadow-md transition-all;
 }
