@@ -14,7 +14,7 @@ function Overlay() {
       {
        !isGaming && <div className="overlay">
          {
-           score!==0 && <div className="flex mb-5 text-3xl text-red-400">
+           score!==0 && <div className="flex mb-5 text-3xl text-red-400 pop">
             <div>🎊</div>
             <div className="font-bold">得分：{score} !</div>
           </div>
@@ -33,8 +33,14 @@ function Overlay() {
               startTimer();
             }} className="button bg-green-600">{score!==0?'再来一下':'计时开始'}</button>
           </div>
-          <div className="text-pink-800">
+          <div className="text-pink-800 my-5">
             ⚠让两边的6个格子镜像对称就可以得分啦！。
+          </div>
+          <div className="animate-bounce opacity-70">
+            👇
+          </div>
+          <div className="text-xl text-gray-600 hover:text-gray-900 border-b-2 hover:border-gray-900 transition-all">
+            <a href="https://github.com/shadowdreamer/mirroring" target="_blank">在Github上查看</a>
           </div>
         </div>
       }
